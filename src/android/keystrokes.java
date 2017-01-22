@@ -51,7 +51,7 @@ public class keystrokes extends CordovaPlugin {
         String key = "";
         if (event != null) {
             key = String.valueOf((char)event.getUnicodeChar());
-        } else (keyCode != null) {
+        } else {
             key = String.valueOf(Character.toChars(keyCode)[0]);
         }
         // Submit it back to the Javascript Callback function
