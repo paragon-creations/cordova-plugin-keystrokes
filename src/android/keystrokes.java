@@ -40,7 +40,7 @@ public class keystrokes extends CordovaPlugin {
         */
         
         // Defining the callback
-        if ('register'.equals(action)) {
+        if ("register".equals(action)) {
             this.callback = CallbackContext;
         }
     }
@@ -48,7 +48,7 @@ public class keystrokes extends CordovaPlugin {
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         // Grab the "Key" character
-        String key = '';
+        String key = "";
         if (event != null) {
             key = String.valueOf((char)event.getUnicodeChar());
         } else (keyCode != null) {
