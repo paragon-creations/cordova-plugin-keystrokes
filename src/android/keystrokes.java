@@ -41,7 +41,7 @@ public class keystrokes extends CordovaPlugin {
         
         // Defining the callback
         if ("register".equals(action)) {
-            this.callback = CallbackContext;
+            this.callback = callbackContext;
         }
     }
     
