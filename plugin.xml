@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-keystrokes"
+        version="1.0">
+    <name>Cordova Plugin - Keystrokes</name>
+    <description>A Cordova Plugin that listens to keyUp events and transfers them to a pre-defined Javascript callback function.</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,plugin,keystrokes,keyup,event,key event, keyup event,keypress,keyboard,external keyboard,external barcode</keywords>
+    <repo>https://github.com/paragon-creations/cordova-plugin-keystrokes</repo>
+    <issue>https://github.com/paragon-creations/cordova-plugin-keystrokes/issues</issue>
+ 
+    <engines>
+        <engine name="cordova-android" version=">=3.6.0" /><!-- Requires CordovaPlugin.preferences -->
+    </engines>
+
+ 
+    <js-module src="www/keystrokes.js" name="keystrokes">
+        <runs/>
+    </js-module>
+    
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="keystrokes" >
+                <param name="android-package" value="il.co.pnc.cordova.keystrokes"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/keystrokes.java" target-dir="src/pnc/cordova/keystrokes"/>
+    </platform>
+
+</plugin>
