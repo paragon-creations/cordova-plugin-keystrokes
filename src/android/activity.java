@@ -16,7 +16,7 @@ import android.view.View.OnKeyListener;
 import android.view.KeyEvent;
 import android.view.*;
 
-public class AndroidWebView extends WebView implements CordovaWebView {
+public class activity extends WebView implements CordovaWebView {
     
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
