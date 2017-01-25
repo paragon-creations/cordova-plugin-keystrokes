@@ -59,9 +59,9 @@ public class activity extends Activity {
             key = String.valueOf(Character.toChars(keyCode)[0]);
         }
         // Submit it back to the Javascript Callback function
-        PluginResult result = new PluginResult(PluginResult.Status.OK, key);
+        /*PluginResult result = new PluginResult(PluginResult.Status.OK, key);
         result.setKeepCallback(true);
-        this.callback.sendPluginResult(result);
+        this.callback.sendPluginResult(result);*/
         // Pass on the event to Android
         return super.onKeyUp(keyCode, event);
     }
