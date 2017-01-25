@@ -16,31 +16,18 @@ import android.view.View.OnKeyListener;
 import android.view.KeyEvent;
 import android.view.*;
 
+// http://www.polyglotprogramminginc.com/interacting-with-the-android-lifecycle-in-a-cordova-plugin/
+
 public class keystrokes extends CordovaPlugin {
     //Activity activity = this.cordova.getActivity();
     private CallbackContext callback = null;
     
+    /*
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
        super.initialize(cordova, webView);
-       
-       @Override
-       public boolean onKeyUp(int keyCode, KeyEvent event) {
-           // Grab the "Key" character
-           String key = "";
-           if (event != null) {
-               key = String.valueOf((char)event.getUnicodeChar());
-           } else {
-               key = String.valueOf(Character.toChars(keyCode)[0]);
-           }
-           // Submit it back to the Javascript Callback function
-           /*PluginResult result = new PluginResult(PluginResult.Status.OK, key);
-           result.setKeepCallback(true);
-           this.callback.sendPluginResult(result);*/
-           // Pass on the event to Android
-           return super.onKeyUp(keyCode, event);
-       }
     }
+    */
     
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
