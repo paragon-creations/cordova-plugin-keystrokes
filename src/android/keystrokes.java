@@ -17,6 +17,7 @@ import android.view.KeyEvent;
 import android.view.*;
 
 // http://www.polyglotprogramminginc.com/interacting-with-the-android-lifecycle-in-a-cordova-plugin/
+//http://stackoverflow.com/questions/32776877/cordova-custom-plugin-with-third-party-native-android-library-not-working
 
 public class keystrokes extends CordovaPlugin {
     //Activity activity = this.cordova.getActivity();
@@ -44,6 +45,8 @@ public class keystrokes extends CordovaPlugin {
         if ("register".equals(action)) {
             this.callback = callbackContext;
         }
+        
+        return true;
     }
     
 }
