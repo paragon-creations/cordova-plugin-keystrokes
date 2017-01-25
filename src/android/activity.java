@@ -16,6 +16,8 @@ import android.view.View.OnKeyListener;
 import android.view.KeyEvent;
 import android.view.*;
 
+import android.webkit.WebView;
+
 public class activity extends WebView implements CordovaWebView {
     
     @Override
