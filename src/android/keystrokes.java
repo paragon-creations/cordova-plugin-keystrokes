@@ -17,7 +17,7 @@ import android.view.KeyEvent;
 import android.view.*;
 
 public class keystrokes extends CordovaPlugin {
-    //Activity activity = this.cordova.getActivity();
+    Activity activity = this.cordova.getActivity();
     private CallbackContext callback = null;
     
     // Not sure if this is needed
@@ -45,6 +45,10 @@ public class keystrokes extends CordovaPlugin {
         }
     }
     
+}
+    
+public class activity extends Activity {
+    
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         // Grab the "Key" character
@@ -61,5 +65,6 @@ public class keystrokes extends CordovaPlugin {
         // Pass on the event to Android
         return super.onKeyUp(keyCode, event);
     }
+    
 }
 
