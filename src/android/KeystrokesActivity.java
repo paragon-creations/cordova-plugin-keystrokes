@@ -25,10 +25,13 @@ public class KeystrokesActivity extends Activity {
     
     private CallbackContext callback;
     
-    public KeystrokesActivity(CallbackContext callback) {
-        this.callback = callback;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {	
+	 Intent intent = getIntent();
+   	 this.callback = intent.getStringExtra("callback");
+	      
     }
-    
+
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         // Grab the "Key" character
