@@ -19,7 +19,7 @@ import android.view.*;
 // http://www.polyglotprogramminginc.com/interacting-with-the-android-lifecycle-in-a-cordova-plugin/
 //http://stackoverflow.com/questions/32776877/cordova-custom-plugin-with-third-party-native-android-library-not-working
 
-public class Keystrokes extends CordovaPlugin {
+public class KeystrokesPlugin extends CordovaPlugin {
     
     private CallbackContext callback = null;
 	
