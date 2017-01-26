@@ -21,42 +21,26 @@ import android.view.*;
 
 public class Keystrokes extends CordovaPlugin {
     
-    //Activity activity = this.cordova.getActivity();
-    private static Keystrokes instance = null;
-	private CallbackContext callback = null;
+    private CallbackContext callback = null;
 	
-	public static Keystrokes getInstance() {
-      if(instance == null) {
-         instance = new Keystrokes();
-      }
-      return instance;
-   }
-   
- 
-    /*
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
        super.initialize(cordova, webView);
+       
+       Context context = cordova.getActivity().getApplicationContext();
+       Intent intent = new Intent(context, Next_Activity.class);
+
+       cordova.startActivityForResult(new KeystrokesActivity(callback), intent, 0);
+       
     }
-    */
-	
-	public CallbackContext getCallBack() {
-		return callback;
-	}
-    
+
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
-        /*
-        View view;
-    	try {
-    	    view = (View)webView.getClass().getMethod("getView").invoke(webView);
-    	} catch (Exception e){
-    	    view = (View)webView;
-    	}
-        */
         
         // Defining the callback
         if ("register".equals(action)) {
+            PluginResult result = new PluginResult(PluginResult.Status.NO_RESULT);
+            result.setKeepCallback(true);
             this.callback = callbackContext;
         }
         

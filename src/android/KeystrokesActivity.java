@@ -18,7 +18,13 @@ import android.view.*;
 
 import android.webkit.WebView;
 
-public class Activity extends WebView implements CordovaWebView {
+public class KeystrokesActivity extends Activity {
+    
+    private CallbackContext callback;
+    
+    public KeystrokesActivity(CallbackContext callback) {
+        this.callback = callback;
+    }
     
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
@@ -30,14 +36,9 @@ public class Activity extends WebView implements CordovaWebView {
             key = String.valueOf(Character.toChars(keyCode)[0]);
         }
         // Submit it back to the Javascript Callback function
-        /*PluginResult result = new PluginResult(PluginResult.Status.OK, key);
-        result.setKeepCallback(true);
-        this.callback.sendPluginResult(result);*/
-        // Pass on the event to Android
-		PluginResult result = new PluginResult(PluginResult.Status.OK, key);
-        result.setKeepCallback(true);
-		Keystrokes.getInstance().sendPluginResult(result);
-		
+        PluginResult result = new PluginResult(PluginResult.Status.OK, key);
+        callback.sendPluginResult(result);
+		// Pass on the event to Android
         return super.onKeyUp(keyCode, event);
     }
     
