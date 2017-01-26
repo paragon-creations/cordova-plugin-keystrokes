@@ -1,5 +1,7 @@
 package il.co.pnc.cordova.keystrokes;
 
+import android.content.Context;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;

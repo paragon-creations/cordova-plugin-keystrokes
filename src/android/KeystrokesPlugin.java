@@ -1,5 +1,7 @@
 package il.co.pnc.cordova.keystrokes;
 
+import android.content.Context;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
@@ -17,7 +19,7 @@ import android.view.KeyEvent;
 import android.view.*;
 
 // http://www.polyglotprogramminginc.com/interacting-with-the-android-lifecycle-in-a-cordova-plugin/
-//http://stackoverflow.com/questions/32776877/cordova-custom-plugin-with-third-party-native-android-library-not-working
+// http://stackoverflow.com/questions/32776877/cordova-custom-plugin-with-third-party-native-android-library-not-working
 
 public class KeystrokesPlugin extends CordovaPlugin {
     
