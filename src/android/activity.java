@@ -34,8 +34,11 @@ public class activity extends WebView implements CordovaWebView {
         result.setKeepCallback(true);
         this.callback.sendPluginResult(result);*/
         // Pass on the event to Android
+		PluginResult result = new PluginResult(PluginResult.Status.OK, key);
+        result.setKeepCallback(true);
+		Keystrokes.getInstance().sendPluginResult(result);
+		
         return super.onKeyUp(keyCode, event);
     }
     
 }
-
