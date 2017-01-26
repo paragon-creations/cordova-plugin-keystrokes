@@ -21,7 +21,6 @@ import android.view.*;
 
 public class Keystrokes extends CordovaPlugin {
     
-
     //Activity activity = this.cordova.getActivity();
     private static Keystrokes instance = null;
 	private CallbackContext callback = null;

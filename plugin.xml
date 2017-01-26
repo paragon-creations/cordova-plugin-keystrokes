@@ -27,8 +27,8 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/keystrokes.java" target-dir="src/pnc/cordova/keystrokes"/>
-        <source-file src="src/android/activity.java" target-dir="src/pnc/cordova/keystrokes"/>
+        <source-file src="src/android/Keystrokes.java" target-dir="src/pnc/cordova/keystrokes"/>
+        <source-file src="src/android/Activity.java" target-dir="src/pnc/cordova/keystrokes"/>
     </platform>
 
 </plugin>
