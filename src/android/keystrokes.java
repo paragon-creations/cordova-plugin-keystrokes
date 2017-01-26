@@ -19,16 +19,31 @@ import android.view.*;
 // http://www.polyglotprogramminginc.com/interacting-with-the-android-lifecycle-in-a-cordova-plugin/
 //http://stackoverflow.com/questions/32776877/cordova-custom-plugin-with-third-party-native-android-library-not-working
 
-public class keystrokes extends CordovaPlugin {
-    //Activity activity = this.cordova.getActivity();
-    private CallbackContext callback = null;
+public class Keystrokes extends CordovaPlugin {
     
+
+    //Activity activity = this.cordova.getActivity();
+    private static Keystrokes instance = null;
+	private CallbackContext callback = null;
+	
+	public static Keystrokes getInstance() {
+      if(instance == null) {
+         instance = new Keystrokes();
+      }
+      return instance;
+   }
+   
+ 
     /*
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
        super.initialize(cordova, webView);
     }
     */
+	
+	public CallbackContext getCallBack() {
+		return callback;
+	}
     
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
@@ -50,4 +65,3 @@ public class keystrokes extends CordovaPlugin {
     }
     
 }
-
