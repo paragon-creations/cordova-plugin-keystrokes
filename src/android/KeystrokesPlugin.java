@@ -31,7 +31,7 @@ public class KeystrokesPlugin extends CordovaPlugin {
        super.initialize(cordova, webView);
        
        Context context = cordova.getActivity().getApplicationContext();
-       Intent intent = new Intent(context, Next_Activity.class);
+       Intent intent = new Intent(context);
 
        cordova.startActivityForResult(new KeystrokesActivity(callback), intent, 0);
        
